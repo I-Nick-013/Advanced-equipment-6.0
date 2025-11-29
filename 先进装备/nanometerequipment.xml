@@ -11,7 +11,7 @@
       <StatusEffect statuseffecttags="medical" type="OnUse" target="UseTarget" duration="30">
         <Affliction identifier="undead" amount="500" />
       </StatusEffect>
-       <StatusEffect type="OnUse" target="This" Condition="-100.0" disabledeltatime="true">
+      <StatusEffect type="OnUse" target="This" Condition="-100.0" disabledeltatime="true">
         <Sound file="Content/Items/Medical/Syringe.ogg" range="500" />
       </StatusEffect>
       <StatusEffect type="OnBroken" target="This">
@@ -244,7 +244,7 @@
     <InventoryIcon texture="Content/Items/JobGear/TalentGear.png" sourcerect="113,264,58,45" origin="0.5,0.5" />
     <Sprite name="Headset" texture="Content/Items/JobGear/TalentGear.png" depth="0.6" sourcerect="253,301,76,64" origin="0.35,0.5" />
     <Body radius="20" height="20" density="15" />
-    <WifiComponent range="2000000000" LinkToChat="true" allowcrossteamcommunication="true" />
+    <WifiComponent range="50000" LinkToChat="true" allowcrossteamcommunication="true" />
     <Wearable limbtype="Head" slots="Any,Headset" msg="ItemMsgPickUpSelect">
       <sprite name="Headset Wearable" texture="%ModDir%/00000.png" limb="Head" hidelimb="false" inheritlimbdepth="true" inheritscale="true" ignorelimbscale="true" hideotherwearables="false" />
       <StatusEffect type="OnWearing" target="Character" disabledeltatime="true">
@@ -526,7 +526,7 @@
     <Sprite texture="Content/Items/Weapons/weapons_new.png" sourcerect="195,282,17,6" depth="0.55" origin="0.5,0.5" />
     <Body width="40" height="14" density="40" />
     <Pickable slots="Any" msg="ItemMsgPickUpSelect" />
-    <Projectile characterusable="false" hitscan="true" removeonhit="true" damagedoors="true" sticktocharacters="true" sticktoitems="true" sticktostructures="true" penetration="50000" maxtargetstohit="2000000000">
+    <Projectile characterusable="false" hitscan="true" removeonhit="true" damagedoors="true" sticktocharacters="true" sticktoitems="true" sticktostructures="true" penetration="50000" maxtargetstohit="50000">
       <ParticleEmitter particle="tracernucleargun" particleamount="1" velocitymin="0" velocitymax="0" scalemultiplier="1,1" colormultiplier="255,200,200,200" />
       <Attack structuredamage="500" itemdamage="500" severlimbsprobability="10" penetration="500" targetforce="0">
         <Affliction identifier="stun" strength="50" />
@@ -757,7 +757,7 @@
     </MeleeWeapon>
   </Item>
   <!--Item-->
-  <Item name="" identifier="nanomechanicaltransplanter" scale="0.4" category="Medical,Equipment" tags="smallitem,geneticdevice,idcard,id_captain,id_engineer,id_mechanic,id_security,id_medic,id_assistant,wreck_id,wreck_admin,wreck_captain,wreck_engineer,wreck_mechanic,wreck_security,wreck_medic,id_outpostmanager,id_outpostsecurity,id_reactor,id_pirate,abandonedsecarmcab" description="" cargocontaineridentifier="metalcrate" impactsoundtag="impact_metal_light">
+  <Item name="" identifier="nanomechanicaltransplanter" scale="0.4" category="Medical,Equipment" tags="smallitem,geneticdevice,idcard,id_captain,id_engineer,id_mechanic,id_security,id_medic,id_assistant,wreck_id,wreck_admin,wreck_captain,wreck_engineer,wreck_mechanic,wreck_security,wreck_medic,id_outpostmanager,id_outpostsecurity,id_reactor,id_pirate" description="" cargocontaineridentifier="metalcrate" impactsoundtag="impact_metal_light">
     <PreferredContainer primary="medcab" secondary="medcab" />
     <Price baseprice="50000">
       <Price storeidentifier="merchantoutpost" sold="false" />
@@ -787,7 +787,7 @@
     <Sprite name="Headset" texture="Content/Items/Genetic/Genetic.png" depth="0.6" sourcerect="148,85,73,35" origin="0.5,0.5" />
     <Body radius="8" width="48" density="15" />
     <Wearable limbtype="Head" slots="Any,HealthInterface" msg="ItemMsgPickUpSelect">
-      <WifiComponent range="2000000000" LinkToChat="true" allowcrossteamcommunication="true" />
+      <WifiComponent range="50000" LinkToChat="true" allowcrossteamcommunication="true" />
       <sprite name="Gene Splicer Wearable" texture="%ModDir%/00000.png" limb="Head" hidelimb="false" inheritlimbdepth="true" inheritscale="true" ignorelimbscale="true" hideotherwearables="false">
         <LightComponent LightColor="100,175,250,250" range="2500" castshadows="false" powerconsumption="1000000000" IsOn="true" vulnerabletoEMP="false" />
       </sprite>
@@ -818,7 +818,7 @@
     <StatusHUD drawhudwhenequipped="true" overlaycolor="50,50,50,50" debugwiring="true" showtexts="false" />
   </Item>
   <!--Item-->
-  <Item name="" identifier="environmentalscanner" category="Equipment,Diving" Tags="smallitem,sonar,provocative,idcard,id_captain,id_engineer,id_mechanic,id_security,id_medic,id_assistant,wreck_id,wreck_admin,wreck_captain,wreck_engineer,wreck_mechanic,wreck_security,wreck_medic,id_outpostmanager,id_outpostsecurity,id_reactor,id_pirate,abandonedsecarmcab" cargocontaineridentifier="metalcrate" Scale="0.5" impactsoundtag="impact_metal_light">
+  <Item name="" identifier="environmentalscanner" category="Equipment,Diving" Tags="smallitem,sonar,provocative,idcard,id_captain,id_engineer,id_mechanic,id_security,id_medic,id_assistant,wreck_id,wreck_admin,wreck_captain,wreck_engineer,wreck_mechanic,wreck_security,wreck_medic,id_outpostmanager,id_outpostsecurity,id_reactor,id_pirate" cargocontaineridentifier="metalcrate" Scale="0.5" impactsoundtag="impact_metal_light">
     <PreferredContainer primary="divingcab" />
     <Price baseprice="12500" maxavailable="5">
       <Price storeidentifier="merchantoutpost" sold="false" />
@@ -843,7 +843,7 @@
     <InventoryIcon texture="Content/Items/InventoryIconAtlas2.png" sourcerect="128,960,64,64" origin="0.5,0.5" />
     <Sprite texture="Content/Items/Tools/tools.png" sourcerect="231,102,25,54" depth="0.55" origin="0.5,0.5" />
     <Body width="23" height="50" density="12" />
-    <Holdable slots="Any,RightHand,LeftHand" holdangle="30" handle1="0,-15" />
+    <Holdable slots="Any,RightHand,LeftHand" usehandrotationforholdangle="true" cameraaimoffset="2500" aimpos="45,5" holdangle="30" handle1="0,-15" />
     <Wearable slots="Bag" msg="ItemMsgPickUpSelect">
       <sprite name="Belt" texture="%ModDir%/00000.png" sourcerect="256,102,112,54" limb="Torso" hidelimb="false" inherittexturescale="true" hideotherwearables="false" inheritorigin="true" inheritsourcerect="true" />
     </Wearable>
