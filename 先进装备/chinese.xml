@@ -6,6 +6,8 @@
   <entitydescription.nanomechanicaltank>一种更适合本地环境的生物改造科技，不要将它的拟态和普通饮料搞混了</entitydescription.nanomechanicaltank>
   <entityname.advancednanoarmor>先进护甲</entityname.advancednanoarmor>
   <entitydescription.advancednanoarmor>欢迎使用先进护甲MKⅢ</entitydescription.advancednanoarmor>
+  <entityname.invisibilitycloak>潜行服</entityname.invisibilitycloak>
+  <entitydescription.invisibilitycloak>“保持低调”</entitydescription.invisibilitycloak>
   <entityname.integratedfacearmour>集成式面甲</entityname.integratedfacearmour>
   <entitydescription.integratedfacearmour>它会帮你找到最优解</entitydescription.integratedfacearmour>
   <entityname.improveadvancedgenesplicer>改进型基因拼接器</entityname.improveadvancedgenesplicer>
@@ -42,6 +44,8 @@
   <Afflictiondescription.Regenerationenhancer>加速你的自体修复功能</Afflictiondescription.Regenerationenhancer>
   <Afflictionname.Vitalstabilizer>活体稳定剂</Afflictionname.Vitalstabilizer>
   <Afflictiondescription.Vitalstabilizer>因为能源分配的问题，无法执行更进一步的功能，但至少它能在关键时刻保护你</Afflictiondescription.Vitalstabilizer>
+  <Afflictionname.opticalcamo>光学迷彩</Afflictionname.opticalcamo>
+  <Afflictiondescription.opticalcamo>“偷袭！”</Afflictiondescription.opticalcamo>
   <Afflictionname.undead>活死人</Afflictionname.undead>
   <Afflictiondescription.undead>你还不能死</Afflictiondescription.undead>
   <displayname.cultivation>[itemname] (培育)</displayname.cultivation>

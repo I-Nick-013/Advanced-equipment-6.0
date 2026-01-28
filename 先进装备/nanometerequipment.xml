@@ -91,7 +91,7 @@
   <!--Item-->
   <Item name="" identifier="advancednanoarmor" category="Diving,Equipment" tags="smallitem,diving,deepdiving,divinggear_wearableindoors,provocative" scale="0.5" cargocontaineridentifier="metalcrate" description="" impactsoundtag="impact_soft">
     <PreferredContainer primary="armcab" />
-    <Price baseprice="125000" maxavailable="2">
+    <Price baseprice="25000" maxavailable="2">
       <Price storeidentifier="merchantoutpost" sold="false" />
       <Price storeidentifier="merchantcity" />
       <Price storeidentifier="merchantresearch" sold="false" />
@@ -131,7 +131,57 @@
     </LightComponent>
   </Item>
   <!--Item-->
-  <Item name="" identifier="integratedfacearmour" scale="0.5" category="Diving,Equipment" tags="smallitem,clothing,clownmask" cargocontaineridentifier="metalcrate" description="" impactsoundtag="impact_metal_light">
+  <Item name="" identifier="invisibilitycloak" category="Equipment" tags="smallitem,clothing" inventoryiconcolor="50,50,50,255" spritecolor="50,50,50,255" scale="0.5" cargocontaineridentifier="metalcrate" description="" impactsoundtag="impact_soft">
+    <PreferredContainer primary="armcab" />
+    <Price baseprice="20000">
+      <Price storeidentifier="merchantoutpost" sold="false" />
+      <Price storeidentifier="merchantcity" />
+      <Price storeidentifier="merchantresearch" sold="false" />
+      <Price storeidentifier="merchantmilitary" sold="false" />
+      <Price storeidentifier="merchantmine" sold="false" />
+    </Price>
+    <Fabricate suitablefabricators="fabricator" requiredtime="60" requiresrecipe="false">
+      <RequiredSkill identifier="electrical" level="50" />
+      <RequiredSkill identifier="mechanical" level="50" />
+      <RequiredSkill identifier="weapons" level="50" />
+      <RequiredItem identifier="nanomechanicaltank" amount="1" />
+      <RequiredItem identifier="advancednanoarmor" />
+      <RequiredItem identifier="shapedchargecell" amount="1" />
+      <RequiredItem identifier="fpgacircuit" amount="5" />
+      <RequiredItem identifier="dementonite" amount="1" />
+    </Fabricate>
+    <Deconstruct time="100">
+      <Item identifier="nanomechanicaltank" />
+      <Item identifier="advancednanoarmor" />
+      <Item identifier="shapedchargecell" />
+      <Item identifier="scrap" amount="5" />
+    </Deconstruct>
+    <InventoryIcon texture="Content/Items/InventoryIconAtlas2.png" sourcerect="0,832,128,128" origin="0.5,0.5" />
+    <Sprite name="Respawn Diving Suit Item" texture="Content/Items/Diving/RespawnSuit_Items.png" sourcerect="0,0,157,121" depth="0.55" origin="0.5,0.5" />
+    <Body radius="45" width="34" density="20" />
+    <Wearable slots="Any,InnerClothes" msg="ItemMsgPickUpSelect">
+      <sprite name="Invisibility Torso" texture="%ModDir%/00000.png" limb="Torso" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Invisibility Right Hand" texture="%ModDir%/00000.png" limb="RightHand" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Invisibility Left Hand" texture="%ModDir%/00000.png" limb="LeftHand" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Invisibility Right Lower Arm" texture="%ModDir%/00000.png" limb="RightArm" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Invisibility Left Lower Arm" texture="%ModDir%/00000.png" limb="LeftArm" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Invisibility Right Upper Arm" texture="%ModDir%/00000.png" limb="RightForearm" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Invisibility Left Upper Arm" texture="%ModDir%/00000.png" limb="LeftForearm" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Invisibility Waist" texture="%ModDir%/00000.png" limb="Waist" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Invisibility Right Thigh" texture="%ModDir%/00000.png" limb="RightThigh" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Invisibility Left Thigh" texture="%ModDir%/00000.png" limb="LeftThigh" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Invisibility Right Leg" texture="%ModDir%/00000.png" limb="RightLeg" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Invisibility Left Leg" texture="%ModDir%/00000.png" limb="LeftLeg" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Invisibility Left Shoe" texture="%ModDir%/00000.png" limb="LeftFoot" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Invisibility Right Shoe" texture="%ModDir%/00000.png" limb="RightFoot" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Invisibility Head" texture="%ModDir%/00000.png" limb="Head" hidelimb="true" inheritlimbdepth="true" inherittexturescale="true" />
+      <StatusEffect type="OnWearing" target="Character" HideFace="true" setvalue="true" disabledeltatime="true">
+        <Affliction identifier="opticalcamo" amount="100" />
+      </StatusEffect>
+    </Wearable>
+  </Item>
+  <!--Item-->
+  <Item name="" identifier="integratedfacearmour" scale="0.5" category="Diving,Equipment" tags="smallitem,clothing,clownmask,clown" cargocontaineridentifier="metalcrate" description="" impactsoundtag="impact_metal_light">
     <PreferredContainer primary="divingcab" />
     <Price baseprice="15000" maxavailable="5">
       <Price storeidentifier="merchantoutpost" sold="false" />
@@ -216,7 +266,6 @@
       <StatusEffect type="OnWearing" target="Character" disabledeltatime="true">
         <Affliction identifier="Vitalstabilizer" amount="500" />
       </StatusEffect>
-      <StatValue stattype="ExtraMissionCount" value="5" />
     </Wearable>
   </Item>
   <!--Item-->
@@ -615,6 +664,7 @@
       <RequiredSkill identifier="mechanical" level="100" />
       <RequiredItem identifier="nanomechanicaltank" amount="2" />
       <RequiredItem identifier="alienpowercell" />
+      <RequiredItem identifier="nucleargun" />
       <RequiredItem identifier="dementonite" amount="5" />
       <RequiredItem identifier="titaniumaluminiumalloy" amount="2" />
     </Fabricate>
@@ -757,7 +807,7 @@
     </MeleeWeapon>
   </Item>
   <!--Item-->
-  <Item name="" identifier="nanomechanicaltransplanter" scale="0.4" category="Medical,Equipment" tags="smallitem,geneticdevice,idcard,id_captain,id_engineer,id_mechanic,id_security,id_medic,id_assistant,wreck_id,wreck_admin,wreck_captain,wreck_engineer,wreck_mechanic,wreck_security,wreck_medic,id_outpostmanager,id_outpostsecurity,id_reactor,id_pirate" description="" cargocontaineridentifier="metalcrate" impactsoundtag="impact_metal_light">
+  <Item name="" identifier="nanomechanicaltransplanter" scale="0.4" category="Medical,Equipment" tags="smallitem,geneticdevice,idcard,id_captain,id_engineer,id_mechanic,id_security,id_medic,id_assistant,wreck_id,wreck_admin,wreck_captain,wreck_engineer,wreck_mechanic,wreck_security,wreck_medic,id_outpostmanager,id_outpostsecurity,id_reactor,id_pirate,clown" description="" cargocontaineridentifier="metalcrate" impactsoundtag="impact_metal_light">
     <PreferredContainer primary="medcab" secondary="medcab" />
     <Price baseprice="50000">
       <Price storeidentifier="merchantoutpost" sold="false" />
@@ -818,7 +868,7 @@
     <StatusHUD drawhudwhenequipped="true" overlaycolor="50,50,50,50" debugwiring="true" showtexts="false" />
   </Item>
   <!--Item-->
-  <Item name="" identifier="environmentalscanner" category="Equipment,Diving" Tags="smallitem,sonar,provocative,idcard,id_captain,id_engineer,id_mechanic,id_security,id_medic,id_assistant,wreck_id,wreck_admin,wreck_captain,wreck_engineer,wreck_mechanic,wreck_security,wreck_medic,id_outpostmanager,id_outpostsecurity,id_reactor,id_pirate" cargocontaineridentifier="metalcrate" Scale="0.5" impactsoundtag="impact_metal_light">
+  <Item name="" identifier="environmentalscanner" category="Equipment,Diving" Tags="smallitem,sonar,provocative,idcard,id_captain,id_engineer,id_mechanic,id_security,id_medic,id_assistant,wreck_id,wreck_admin,wreck_captain,wreck_engineer,wreck_mechanic,wreck_security,wreck_medic,id_outpostmanager,id_outpostsecurity,id_reactor,id_pirate,clown" cargocontaineridentifier="metalcrate" Scale="0.5" impactsoundtag="impact_metal_light">
     <PreferredContainer primary="divingcab" />
     <Price baseprice="12500" maxavailable="5">
       <Price storeidentifier="merchantoutpost" sold="false" />

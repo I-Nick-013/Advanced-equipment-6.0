@@ -37,27 +37,26 @@
       <StatValue stattype="MaxRepairConditionMultiplierMechanical" value="0.5" />
       <StatValue stattype="MaxRepairConditionMultiplierElectrical" value="0.5" />
       <StatValue stattype="CPRBoost" value="1" />
-      <StatValue stattype="PoisonMultiplier" value="1" />
-      <StatValue stattype="MeleeAttackSpeed" value="1" />
       <StatValue stattype="TurretAttackSpeed" value="1" />
       <StatValue stattype="RangedAttackSpeed" value="1" />
-      <StatValue stattype="MeleeAttackMultiplier" value="1" />
       <StatValue stattype="ReputationGainMultiplier" value="1" />
       <StatValue stattype="ExplosionRadiusMultiplier" value="1" />
-      <StatValue stattype="MedicalItemApplyingMultiplier" value="1" />
       <StatValue stattype="RepairToolDeattachTimeMultiplier" value="1" />
-      <StatValue stattype="MedicalItemEffectivenessMultiplier" value="1" />
       <StatValue stattype="GeneticMaterialTaintedProbabilityReductionOnCombine" value="1" />
       <StatValue stattype="RepairSpeed" value="5" />
       <StatValue stattype="SwimmingSpeed" value="5" />
-      <StatValue stattype="AttackMultiplier" value="5" />
+      <StatValue stattype="MeleeAttackSpeed" value="5" />
+      <StatValue stattype="BuffDurationMultiplier" value="5" />
       <StatValue stattype="ExplosionDamageMultiplier" value="5" />
+      <StatValue stattype="BuffItemApplyingMultiplier" value="5" />
       <StatValue stattype="IncreaseFabricationQuality" value="5" />
       <StatValue stattype="skillgainspeed" value="10" />
       <StatValue stattype="FlowResistance" value="10" />
+      <StatValue stattype="AttackMultiplier" value="10" />
+      <StatValue stattype="PoisonMultiplier" value="10" />
       <StatValue stattype="ExtraMissionCount" value="10" />
       <StatValue stattype="RangedSpreadReduction" value="10" />
-      <StatValue stattype="BuffDurationMultiplier" value="10" />
+      <StatValue stattype="MeleeAttackMultiplier" value="10" />
       <StatValue stattype="MaximumHealthMultiplier" value="10" />
       <StatValue stattype="ExperienceGainMultiplier" value="10" />
       <StatValue stattype="GeneticMaterialRefineBonus" value="25" />
@@ -77,8 +76,10 @@
       <StatValue stattype="MeleeAttackSpeed" value="1" />
       <StatValue stattype="TurretAttackSpeed" value="1" />
       <StatValue stattype="RangedAttackSpeed" value="1" />
-      <StatValue stattype="MeleeAttackMultiplier" value="1" />
-      <StatValue stattype="BuffDurationMultiplier" value="5" />
+      <StatValue stattype="BuffDurationMultiplier" value="1" />
+      <StatValue stattype="BuffItemApplyingMultiplier" value="1" />
+      <StatValue stattype="MeleeAttackMultiplier" value="5" />
+      <StatValue stattype="MaximumHealthMultiplier" value="5" />
       <StatValue stattype="FlowResistance" value="10" />
       <StatValue stattype="RangedSpreadReduction" value="10" />
     </Effect>
@@ -90,20 +91,22 @@
       <StatusEffect target="Character">
         <Affliction identifier="husktransformimmunitytemporary" amount="500" />
       </StatusEffect>
+      <AbilityFlag flagtype="AlwaysStayConscious" />
       <StatValue stattype="MaxRepairConditionMultiplierMechanical" value="0.5" />
       <StatValue stattype="MaxRepairConditionMultiplierElectrical" value="0.5" />
       <StatValue stattype="CPRBoost" value="1" />
-      <StatValue stattype="PoisonMultiplier" value="1" />
       <StatValue stattype="ReputationGainMultiplier" value="1" />
-      <StatValue stattype="MedicalItemApplyingMultiplier" value="1" />
+      <StatValue stattype="ExplosionRadiusMultiplier" value="1" />
+      <StatValue stattype="ExplosionDamageMultiplier" value="1" />
       <StatValue stattype="RepairToolDeattachTimeMultiplier" value="1" />
-      <StatValue stattype="MedicalItemEffectivenessMultiplier" value="1" />
       <StatValue stattype="GeneticMaterialTaintedProbabilityReductionOnCombine" value="1" />
-      <StatValue stattype="AttackMultiplier" value="2.5" />
       <StatValue stattype="RepairSpeed" value="5" />
+      <StatValue stattype="AttackMultiplier" value="5" />
+      <StatValue stattype="PoisonMultiplier" value="5" />
+      <StatValue stattype="ExtraMissionCount" value="5" />
+      <StatValue stattype="ExperienceGainMultiplier" value="5" />
       <StatValue stattype="IncreaseFabricationQuality" value="5" />
       <StatValue stattype="skillgainspeed" value="10" />
-      <StatValue stattype="ExperienceGainMultiplier" value="10" />
       <StatValue stattype="GeneticMaterialRefineBonus" value="10" />
     </Effect>
     <icon texture="Content/UI/MainIconsAtlas.png" sourcerect="256,896,128,128" color="10,193,114,255" origin="0,0" />
@@ -132,6 +135,21 @@
     <icon texture="Content/UI/MainIconsAtlas.png" sourcerect="256,896,128,128" color="10,193,114,255" origin="0,0" />
   </Affliction>
   <!--Affliction-->
+  <Affliction name="" identifier="opticalcamo" type="talentbuff" isbuff="true" hideiconafterdelay="true" limbspecific="false" maxstrength="100" treatmentthreshold="100" iconcolors="50,50,50;100,100,100;150,150,150;200,200,200">
+    <Effect minstrength="0" maxstrength="100" strengthchange="-50">
+      <StatusEffect target="Character">
+        <Affliction identifier="Concealed" amount="1" />
+      </StatusEffect>
+      <AbilityFlag flagtype="IgnoredByEnemyAI" />
+      <StatValue stattype="MeleeAttackSpeed" value="10" />
+      <StatValue stattype="MedicalItemApplyingMultiplier" value="50" />
+      <StatValue stattype="MedicalItemEffectivenessMultiplier" value="50" />
+      <StatValue stattype="PoisonMultiplier" value="100" />
+      <StatValue stattype="MeleeAttackMultiplier" value="100" />
+    </Effect>
+    <icon texture="Content/UI/MainIconsAtlas.png" sourcerect="0,0,125,125" color="255,255,255,255" origin="0,0" />
+  </Affliction>
+  <!--Affliction-->
   <Affliction name="" identifier="nano.nightvision" type="none" isbuff="true" limbspecific="false" indicatorlimb="Head" maxstrength="100" showiconthreshold="infinity">
     <Effect minstrength="0" maxstrength="100" multiplybymaxvitality="true" graincolor="0,0,0,255" mingrainstrength="0.75" maxgrainstrength="1" minscreenblur="0.75" maxscreenblur="1" strengthchange="-500" />
   </Affliction>
@@ -148,3 +166,4 @@
     <icon texture="%ModDir%/undead.png" sourcerect="0,0,144,192" color="10,193,114,255" origin="0,0" />
   </Affliction>
 </Afflictions>
+<!--Affliction-->

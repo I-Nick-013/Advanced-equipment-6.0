@@ -6,6 +6,8 @@
   <entitydescription.nanomechanicaltank>A bioengineering technology more suitable for the local environment. Don't confuse its mimicry with ordinary beverages.</entitydescription.nanomechanicaltank>
   <entityname.advancednanoarmor>Advanced armor</entityname.advancednanoarmor>
   <entitydescription.advancednanoarmor>Welcome to Advanced Armor MK Ⅲ</entitydescription.advancednanoarmor>
+  <entityname.invisibilitycloak>Stealth suit</entityname.invisibilitycloak>
+  <entitydescription.invisibilitycloak>“Layin' low.”</entitydescription.invisibilitycloak>
   <entityname.integratedfacearmour>Integrated face armor</entityname.integratedfacearmour>
   <entitydescription.integratedfacearmour>It will help you find the optimal solution</entitydescription.integratedfacearmour>
   <entityname.improveadvancedgenesplicer>Improved gene splicer</entityname.improveadvancedgenesplicer>
@@ -42,6 +44,8 @@
   <Afflictiondescription.Regenerationenhancer>Accelerate your self-repairing function.</Afflictiondescription.Regenerationenhancer>
   <Afflictionname.Vitalstabilizer>Vital Stabilizer</Afflictionname.Vitalstabilizer>
   <Afflictiondescription.Vitalstabilizer>No further functions can be performed due to energy distribution issues, but at least it will protect you in a critical moment</Afflictiondescription.Vitalstabilizer>
+  <Afflictionname.opticalcamo>Optical Camouflage</Afflictionname.opticalcamo>
+  <Afflictiondescription.opticalcamo>“Sneak attack!”</Afflictiondescription.opticalcamo>
   <Afflictionname.undead>Living dead</Afflictionname.undead>
   <Afflictiondescription.undead>You can't die yet</Afflictiondescription.undead>
   <displayname.cultivation>[itemname] (Cultivation)</displayname.cultivation>
