@@ -330,10 +330,10 @@
     <Body width="90" height="60" density="20" />
     <MeleeWeapon slots="Any,RightHand,LeftHand" controlpose="true" aimpos="45,10" handle1="0,18" holdangle="90" reload="1" range="50" combatpriority="6">
       <Wearable slots="Bag" msg="ItemMsgPickUpSelect">
-        <StatusEffect type="Always" target="Contained" Condition="1.0" />
+        <StatusEffect type="Always" target="Contained" Condition="5.0" />
         <sprite name="Tool Belt" texture="%ModDir%/00000.png" sourcerect="256,102,112,54" limb="Torso" hidelimb="false" inherittexturescale="true" hideotherwearables="false" inheritorigin="true" inheritsourcerect="true" />
       </Wearable>
-      <Attack structuredamage="0" itemdamage="0" targetimpulse="2">
+      <Attack structuredamage="0" itemdamage="0" targetimpulse="1">
         <Affliction identifier="stun" strength="10" />
         <StatusEffect type="OnUse" target="UseTarget">
           <Conditional entitytype="eq Character" />
@@ -428,8 +428,8 @@
       <RequiredItems items="oxygensource,weldingtoolfuel" type="Contained" msg="ItemMsgOxygenTankRequired" />
       <StatusEffect type="OnUse" targettype="Contained" targets="oxygentank" Condition="-0.1" />
       <StatusEffect type="OnUse" targettype="Contained" targets="oxygenitetank" Condition="-0.05" />
-      <StatusEffect type="OnUse" targettype="UseTarget" targets="door,ductblock,aliendoor" Stuck="-25.0" Condition="-10.0" />
-      <StatusEffect type="OnUse" targettype="UseTarget" Condition="-10.0" />
+      <StatusEffect type="OnUse" targettype="UseTarget" targets="weldable" Stuck="-25.0" />
+      <StatusEffect type="OnUse" targettype="UseTarget" Condition="-25.0" />
       <StatusEffect type="OnUse" targettype="Limb" severlimbsprobability="1">
         <Affliction identifier="acidburn" strength="5" />
         <Affliction identifier="acidreaction" strength="5" />
@@ -520,7 +520,7 @@
       <sound file="Content/Items/Tools/WeldingLoop.ogg" type="OnUse" range="500.0" loop="true" />
       <StatusEffect type="OnUse" targettype="Contained" targets="weldingfueltank" Condition="-0.1" />
       <StatusEffect type="OnUse" targettype="Contained" targets="incendiumfueltank" Condition="-0.05" />
-      <StatusEffect type="OnUse" targettype="UseTarget" targets="door,ductblock" Stuck="25.0" Condition="10.0" />
+      <StatusEffect type="OnUse" targettype="UseTarget" targets="weldable" Stuck="25.0" />
       <StatusEffect type="OnUse" targettype="Limb">
         <ReduceAffliction identifier="burn" amount="5" />
         <ReduceAffliction identifier="acidburn" amount="2.5" />
@@ -743,9 +743,8 @@
     <Holdable slots="Any,RightHand+LeftHand" aimpos="90,10" handle1="-5,-10" handle2="-5,-10" msg="ItemMsgPickUpSelect" />
     <RepairTool firedamage="100" structurefixamount="500" range="500" barrelpos="75,0" targetforce="50" repairmultiple="true" repairthroughwalls="true" particles="weld" levelwallfixamount="-10" combatpriority="10">
       <RequiredItems items="shapedchargecell" type="Contained" />
-      <StatusEffect type="OnUse" targettype="Contained" targets="shapedchargecell" Condition="-0.5" />
-      <StatusEffect type="OnUse" targettype="UseTarget" targets="door,ductblock" Stuck="10.0" Condition="10" />
-      <StatusEffect type="OnUse" targettype="UseTarget" Condition="-10" />
+      <StatusEffect type="OnUse" targettype="Contained" targets="shapedchargecell" Condition="-0.1" />
+      <StatusEffect type="OnUse" targettype="UseTarget" targets="weldable" Stuck="5.0" />
       <ParticleEmitter particle="largeplasma" particlespersecond="50" copyentityangle="true" />
       <ParticleEmitterHitStructure particle="plasmaspark" particlespersecond="100" anglemin="-40" anglemax="40" velocitymin="100" velocitymax="800" />
       <ParticleEmitterHitStructure particle="plasmasmoke" particlespersecond="3" anglemin="-5" anglemax="5" velocitymin="10" velocitymax="20" />
@@ -807,7 +806,7 @@
     </MeleeWeapon>
   </Item>
   <!--Item-->
-  <Item name="" identifier="nanomechanicaltransplanter" scale="0.4" category="Medical,Equipment" tags="smallitem,geneticdevice,idcard,id_captain,id_engineer,id_mechanic,id_security,id_medic,id_assistant,wreck_id,wreck_admin,wreck_captain,wreck_engineer,wreck_mechanic,wreck_security,wreck_medic,id_outpostmanager,id_outpostsecurity,id_reactor,id_pirate,clown" description="" cargocontaineridentifier="metalcrate" impactsoundtag="impact_metal_light">
+  <Item name="" identifier="nanomechanicaltransplanter" scale="0.4" category="Medical,Equipment" tags="smallitem,geneticdevice,idcard,id_captain,id_engineer,id_mechanic,id_security,id_medic,id_assistant,wreck_id,wreck_admin,wreck_captain,wreck_engineer,wreck_mechanic,wreck_security,wreck_medic,id_outpostmanager,id_outpostsecurity,id_abandonedseccab,id_reactor,id_pirate,clown" description="" cargocontaineridentifier="metalcrate" impactsoundtag="impact_metal_light">
     <PreferredContainer primary="medcab" secondary="medcab" />
     <Price baseprice="50000">
       <Price storeidentifier="merchantoutpost" sold="false" />
@@ -868,7 +867,7 @@
     <StatusHUD drawhudwhenequipped="true" overlaycolor="50,50,50,50" debugwiring="true" showtexts="false" />
   </Item>
   <!--Item-->
-  <Item name="" identifier="environmentalscanner" category="Equipment,Diving" Tags="smallitem,sonar,provocative,idcard,id_captain,id_engineer,id_mechanic,id_security,id_medic,id_assistant,wreck_id,wreck_admin,wreck_captain,wreck_engineer,wreck_mechanic,wreck_security,wreck_medic,id_outpostmanager,id_outpostsecurity,id_reactor,id_pirate,clown" cargocontaineridentifier="metalcrate" Scale="0.5" impactsoundtag="impact_metal_light">
+  <Item name="" identifier="environmentalscanner" category="Equipment,Diving" Tags="smallitem,sonar,provocative,idcard,id_captain,id_engineer,id_mechanic,id_security,id_medic,id_assistant,wreck_id,wreck_admin,wreck_captain,wreck_engineer,wreck_mechanic,wreck_security,wreck_medic,id_outpostmanager,id_outpostsecurity,id_abandonedseccab,id_reactor,id_pirate,clown" cargocontaineridentifier="metalcrate" Scale="0.25" impactsoundtag="impact_metal_light">
     <PreferredContainer primary="divingcab" />
     <Price baseprice="12500" maxavailable="5">
       <Price storeidentifier="merchantoutpost" sold="false" />
@@ -890,11 +889,11 @@
       <Item identifier="nanomechanicaltank" amount="4" />
       <Item identifier="scrap" amount="2" />
     </Deconstruct>
-    <InventoryIcon texture="Content/Items/InventoryIconAtlas2.png" sourcerect="128,960,64,64" origin="0.5,0.5" />
-    <Sprite texture="Content/Items/Tools/tools.png" sourcerect="231,102,25,54" depth="0.55" origin="0.5,0.5" />
-    <Body width="23" height="50" density="12" />
-    <Holdable slots="Any,RightHand,LeftHand" usehandrotationforholdangle="true" cameraaimoffset="2500" aimpos="45,5" holdangle="30" handle1="0,-15" />
-    <Wearable slots="Bag" msg="ItemMsgPickUpSelect">
+    <InventoryIcon texture="Content/Items/InventoryIconAtlas2.png" sourcerect="323,193,60,61" origin="0.5,0.5" />
+    <Sprite texture="Content/Items/Electricity/signalcomp.png" sourcerect="149,371,69,93" depth="0.55" origin="0.5,0.5" />
+    <Body width="60" height="90" density="15" />
+    <Holdable slots="Any,RightHand,LeftHand" usehandrotationforholdangle="true" cameraaimoffset="2500" aimpos="45,5" holdangle="30" handle1="10,-25" msg="ItemMsgPickUpSelect" />
+    <Wearable slots="Bag">
       <sprite name="Belt" texture="%ModDir%/00000.png" sourcerect="256,102,112,54" limb="Torso" hidelimb="false" inherittexturescale="true" hideotherwearables="false" inheritorigin="true" inheritsourcerect="true" />
     </Wearable>
     <AiTarget sight="250" staticsight="true" />
