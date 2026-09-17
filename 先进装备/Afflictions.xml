@@ -2,32 +2,33 @@
 <Afflictions>
   <!--Affliction-->
   <Affliction name="" identifier="thepowerofnano" type="talentbuff" isbuff="true" hideiconafterdelay="true" limbspecific="false" maxstrength="100" treatmentthreshold="100" iconcolors="75,75,75;125,175,125;175,250,175">
-    <Effect minstrength="0" maxstrength="100" strengthchange="-10" resistancefor="damage,burn,bleeding,bloodloss,stun,emp,pressure,gaze,hallucinating,hallucinatingshortduration,oxygenlow,alieninfection,paralysis,poison,debuff,psychosis,nausea,slow,spaceherpes,respawnpenalty,invertcontrols,infection,none" minresistance="0.5" maxresistance="0.5">
+    <Effect minstrength="0" maxstrength="100" strengthchange="-10" resistancefor="damage,burn,bleeding,bloodloss,stun,radiationsickness,emp,pressure,gaze,hallucinating,hallucinatingshortduration,oxygenlow,alieninfection,paralysis,poison,debuff,psychosis,nausea,slow,spaceherpes,respawnpenalty,invertcontrols,infection,none" minresistance="0.5" maxresistance="0.5">
       <StatusEffect target="Character" OxygenAvailable="10000" UseHullOxygen="true">
         <Affliction identifier="recoilstabilized" amount="1" />
-        <ReduceAffliction identifier="damage" amount="5" />
-        <ReduceAffliction identifier="burn" amount="2.5" />
-        <ReduceAffliction identifier="bleeding" amount="1" />
-        <ReduceAffliction identifier="bloodloss" amount="0.5" />
-        <ReduceAffliction identifier="stun" amount="2.5" />
-        <ReduceAffliction identifier="emp" amount="0.5" />
-        <ReduceAffliction identifier="pressure" amount="0.5" />
-        <ReduceAffliction identifier="gaze" amount="0.5" />
-        <ReduceAffliction identifier="hallucinating" amount="0.5" />
-        <ReduceAffliction identifier="hallucinatingshortduration" amount="0.5" />
-        <ReduceAffliction identifier="oxygenlow" amount="0.5" />
-        <ReduceAffliction identifier="alieninfection" amount="1" />
-        <ReduceAffliction identifier="paralysis" amount="1" />
-        <ReduceAffliction identifier="poison" amount="2.5" />
-        <ReduceAffliction identifier="debuff" amount="5" />
-        <ReduceAffliction identifier="psychosis" amount="0.5" />
-        <ReduceAffliction identifier="nausea" amount="0.5" />
-        <ReduceAffliction identifier="slow" amount="0.5" />
-        <ReduceAffliction identifier="spaceherpes" amount="0.5" />
-        <ReduceAffliction identifier="respawnpenalty" amount="0.5" />
-        <ReduceAffliction identifier="invertcontrols" amount="0.5" />
-        <ReduceAffliction identifier="infection" amount="0.5" />
-        <ReduceAffliction identifier="none" amount="0.5" />
+        <ReduceAffliction identifier="damage" amount="10" />
+        <ReduceAffliction identifier="burn" amount="5" />
+        <ReduceAffliction identifier="bleeding" amount="5" />
+        <ReduceAffliction identifier="bloodloss" amount="5" />
+        <ReduceAffliction identifier="stun" amount="10" />
+        <ReduceAffliction identifier="radiationsickness" amount="1" />
+        <ReduceAffliction identifier="emp" amount="1" />
+        <ReduceAffliction identifier="pressure" amount="1" />
+        <ReduceAffliction identifier="gaze" amount="1" />
+        <ReduceAffliction identifier="hallucinating" amount="1" />
+        <ReduceAffliction identifier="hallucinatingshortduration" amount="1" />
+        <ReduceAffliction identifier="oxygenlow" amount="1" />
+        <ReduceAffliction identifier="alieninfection" amount="5" />
+        <ReduceAffliction identifier="paralysis" amount="5" />
+        <ReduceAffliction identifier="poison" amount="10" />
+        <ReduceAffliction identifier="debuff" amount="10" />
+        <ReduceAffliction identifier="psychosis" amount="1" />
+        <ReduceAffliction identifier="nausea" amount="1" />
+        <ReduceAffliction identifier="slow" amount="1" />
+        <ReduceAffliction identifier="spaceherpes" amount="1" />
+        <ReduceAffliction identifier="respawnpenalty" amount="1" />
+        <ReduceAffliction identifier="invertcontrols" amount="1" />
+        <ReduceAffliction identifier="infection" amount="1" />
+        <ReduceAffliction identifier="none" amount="1" />
       </StatusEffect>
       <AbilityFlag flagtype="ImmuneToPressure" />
       <AbilityFlag flagtype="AlwaysStayConscious" />
@@ -128,7 +129,7 @@
   <Affliction name="" identifier="Vitalstabilizer" type="talentbuff" isbuff="true" hideiconafterdelay="true" limbspecific="false" maxstrength="100" treatmentthreshold="100" iconcolors="75,75,75;125,175,125;175,250,175">
     <Effect minstrength="0" maxstrength="100" strengthchange="-50">
       <StatusEffect target="Character">
-        <Affliction identifier="durationincrease" amount="500" />
+        <Affliction identifier="pressurestabilized" amount="500" />
       </StatusEffect>
       <AbilityFlag flagtype="CanNotDieToAfflictions" />
     </Effect>

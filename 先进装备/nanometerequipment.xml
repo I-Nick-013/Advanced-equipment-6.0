@@ -3,7 +3,11 @@
   <!--Item-->
   <Item name="" identifier="undeadpotion" category="Medical" maxstacksize="32" maxstacksizecharacterinventory="32" cargocontaineridentifier="mediccrate" Tags="smallitem,chem,medical,syringe" description="" useinhealthinterface="true" scale="0.5" impactsoundtag="impact_metal_light" RequireAimToUse="True">
     <PreferredContainer primary="medcab" secondary="medcontainer" />
-    <Fabricate suitablefabricators="vendingmachine" requiredtime="1" requiredmoney="50" fabricationlimitmin="16" fabricationlimitmax="32" />
+    <Fabricate suitablefabricators="vendingmachine" requiredtime="1" requiredmoney="100" fabricationlimitmin="16" fabricationlimitmax="32" />
+    <Deconstruct time="100">
+      <Item identifier="geneticmaterial_unresearched" amount="1" />
+      <Item identifier="stabilozine" amount="1" />
+    </Deconstruct>
     <InventoryIcon texture="Content/Items/Medical/Medicines.png" sourcerect="448,256,64,64" origin="0.5,0.5" />
     <Sprite texture="Content/Items/Medical/Medicines.png" sourcerect="303,310,35,67" depth="0.6" origin="0.5,0.5" />
     <Body width="35" height="65" density="10.2" />
@@ -36,11 +40,11 @@
       <RequiredSkill identifier="electrical" level="50" />
       <RequiredSkill identifier="mechanical" level="50" />
       <RequiredSkill identifier="medical" level="50" />
-      <RequiredItem identifier="huskeggs" />
-      <RequiredItem identifier="fpgacircuit" amount="2" />
+      <RequiredItem identifier="energydrink" />
+      <RequiredItem identifier="fpgacircuit" />
       <RequiredItem identifier="geneticmaterial_unresearched" />
-      <RequiredItem identifier="undeadpotion" amount="32" />
-      <RequiredItem identifier="ethanol" amount="4" />
+      <RequiredItem identifier="undeadpotion" />
+      <RequiredItem identifier="ethanol" amount="2" />
     </Fabricate>
     <Fabricate suitablefabricators="fabricator" requiredtime="30" displayname="cultivation" requiresrecipe="false" amount="4">
       <RequiredSkill identifier="medical" level="25" />
@@ -52,29 +56,7 @@
         <Sound file="Content/Items/Medical/Syringe.ogg" range="500" />
       </StatusEffect>
       <StatusEffect tags="medical" type="OnUse" target="This, Limb" duration="60">
-        <ReduceAffliction identifier="damage" amount="25" />
-        <ReduceAffliction identifier="burn" amount="10" />
-        <ReduceAffliction identifier="bleeding" amount="5" />
-        <ReduceAffliction identifier="bloodloss" amount="1" />
-        <ReduceAffliction identifier="stun" amount="10" />
-        <ReduceAffliction identifier="emp" amount="1" />
-        <ReduceAffliction identifier="pressure" amount="1" />
-        <ReduceAffliction identifier="gaze" amount="1" />
-        <ReduceAffliction identifier="hallucinating" amount="1" />
-        <ReduceAffliction identifier="hallucinatingshortduration" amount="1" />
-        <ReduceAffliction identifier="oxygenlow" amount="1" />
-        <ReduceAffliction identifier="alieninfection" amount="5" />
-        <ReduceAffliction identifier="paralysis" amount="5" />
-        <ReduceAffliction identifier="poison" amount="10" />
-        <ReduceAffliction identifier="debuff" amount="25" />
-        <ReduceAffliction identifier="psychosis" amount="1" />
-        <ReduceAffliction identifier="nausea" amount="1" />
-        <ReduceAffliction identifier="slow" amount="1" />
-        <ReduceAffliction identifier="spaceherpes" amount="1" />
-        <ReduceAffliction identifier="respawnpenalty" amount="1" />
-        <ReduceAffliction identifier="invertcontrols" amount="1" />
-        <ReduceAffliction identifier="infection" amount="1" />
-        <ReduceAffliction identifier="none" amount="1" />
+        <Affliction identifier="thepowerofnano" amount="50" />
       </StatusEffect>
       <StatusEffect type="OnUse" target="UseTarget" disabledeltatime="true">
         <GiveSkill skillidentifier="electrical" amount="1" />
@@ -102,11 +84,11 @@
       <RequiredSkill identifier="electrical" level="75" />
       <RequiredSkill identifier="mechanical" level="75" />
       <RequiredSkill identifier="medical" level="75" />
-      <RequiredItem identifier="nanomechanicaltank" amount="2" />
-      <RequiredItem identifier="fulguriumfuelrodvolatile" />
-      <RequiredItem identifier="fpgacircuit" amount="2" />
-      <RequiredItem identifier="endwormshell" />
-      <RequiredItem identifier="ballisticfiber" amount="5" />
+      <RequiredItem identifier="nanomechanicaltank" />
+      <RequiredItem identifier="fuelrod" />
+      <RequiredItem identifier="fpgacircuit" />
+      <RequiredItem identifier="proteinbar" />
+      <RequiredItem identifier="divingsuit" />
     </Fabricate>
     <Deconstruct time="100">
       <Item identifier="nanomechanicaltank" amount="4" />
@@ -119,7 +101,7 @@
     <Wearable slots="Any,OuterClothes" msg="ItemMsgPickUpSelect">
       <StatusEffect type="OnWearing" target="Character" disabledeltatime="true">
         <Affliction identifier="Muscleenhancer" strength="500" />
-        <Affliction identifier="combatstimulant" strength="500" />
+        <Affliction identifier="durationincrease" strength="500" />
         <Sound file="Content/Items/Diving/DivingSuitLoop1.ogg" range="500" />
         <Sound file="Content/Items/Diving/DivingSuitLoop2.ogg" range="500" />
       </StatusEffect>
@@ -144,11 +126,11 @@
       <RequiredSkill identifier="electrical" level="50" />
       <RequiredSkill identifier="mechanical" level="50" />
       <RequiredSkill identifier="weapons" level="50" />
-      <RequiredItem identifier="nanomechanicaltank" amount="1" />
+      <RequiredItem identifier="nanomechanicaltank" />
       <RequiredItem identifier="advancednanoarmor" />
-      <RequiredItem identifier="shapedchargecell" amount="1" />
-      <RequiredItem identifier="fpgacircuit" amount="5" />
-      <RequiredItem identifier="dementonite" amount="1" />
+      <RequiredItem identifier="shapedchargecell" />
+      <RequiredItem identifier="lightcomponent" />
+      <RequiredItem identifier="dementonite" />
     </Fabricate>
     <Deconstruct time="100">
       <Item identifier="nanomechanicaltank" />
@@ -177,6 +159,7 @@
       <sprite name="Invisibility Head" texture="%ModDir%/00000.png" limb="Head" hidelimb="true" inheritlimbdepth="true" inherittexturescale="true" />
       <StatusEffect type="OnWearing" target="Character" HideFace="true" setvalue="true" disabledeltatime="true">
         <Affliction identifier="opticalcamo" amount="100" />
+        <Affliction identifier="adrenalinerush" amount="100" />
       </StatusEffect>
     </Wearable>
   </Item>
@@ -195,10 +178,10 @@
       <RequiredSkill identifier="mechanical" level="75" />
       <RequiredSkill identifier="medical" level="75" />
       <RequiredItem identifier="nanomechanicaltank" />
-      <RequiredItem identifier="fulguriumfuelrodvolatile" />
-      <RequiredItem identifier="fpgacircuit" amount="5" />
-      <RequiredItem identifier="titaniumaluminiumalloy" />
-      <RequiredItem identifier="plastic" />
+      <RequiredItem identifier="fuelrod" />
+      <RequiredItem identifier="fpgacircuit" />
+      <RequiredItem identifier="proteinbar" />
+      <RequiredItem identifier="healthscanner" />
     </Fabricate>
     <Deconstruct time="100">
       <Item identifier="nanomechanicaltank" amount="2" />
@@ -220,7 +203,7 @@
       </StatusEffect>
       <StatusEffect type="OnWearing" target="Character" OxygenAvailable="10000" UseHullOxygen="true">
         <Affliction identifier="neuroenhancer" amount="500" />
-        <Affliction identifier="adrenalinerush" amount="500" />
+        <Affliction identifier="combatstimulant" amount="500" />
       </StatusEffect>
     </Wearable>
     <CustomInterface canbeselected="false" drawhudwhenequipped="true" allowuioverlap="true">
@@ -247,9 +230,10 @@
     <Fabricate suitablefabricators="fabricator" requiredtime="60" requiresrecipe="false">
       <RequiredSkill identifier="medical" level="50" />
       <RequiredItem identifier="nanomechanicaltank" />
-      <RequiredItem identifier="advancedgenesplicer" />
+      <RequiredItem identifier="fuelrod" />
       <RequiredItem identifier="fpgacircuit" />
-      <RequiredItem identifier="fulgurium" />
+      <RequiredItem identifier="proteinbar" />
+      <RequiredItem identifier="genesplicer" />
     </Fabricate>
     <Deconstruct time="100">
       <Item identifier="nanomechanicaltank" amount="2" />
@@ -281,10 +265,10 @@
     <Fabricate suitablefabricators="fabricator" requiredtime="60" requiresrecipe="false">
       <RequiredSkill identifier="medical" level="50" />
       <RequiredItem identifier="nanomechanicaltank" />
-      <RequiredItem identifier="fulguriumfuelrodvolatile" />
-      <RequiredItem identifier="autoinjectorheadset" />
-      <RequiredItem identifier="fpgacircuit" amount="3" />
-      <RequiredItem identifier="dementonite" />
+      <RequiredItem identifier="fuelrod" />
+      <RequiredItem identifier="fpgacircuit" />
+      <RequiredItem identifier="proteinbar" />
+      <RequiredItem identifier="headset" />
     </Fabricate>
     <Deconstruct time="100">
       <Item identifier="nanomechanicaltank" amount="2" />
@@ -318,8 +302,8 @@
       <RequiredItem identifier="nanomechanicaltank" />
       <RequiredItem identifier="shapedchargecell" amount="2" />
       <RequiredItem identifier="metalcrate" />
-      <RequiredItem identifier="plastic" amount="5" />
-      <RequiredItem identifier="organicfiber" amount="5" />
+      <RequiredItem identifier="titaniumaluminiumalloy" amount="5" />
+      <RequiredItem identifier="proteinbar" />
     </Fabricate>
     <Deconstruct time="100">
       <Item identifier="nanomechanicaltank" amount="2" />
@@ -374,8 +358,8 @@
       <RequiredItem identifier="nanomechanicaltank" />
       <RequiredItem identifier="titaniumaluminiumalloy" />
       <RequiredItem identifier="dementonite" />
-      <RequiredItem identifier="plastic" />
-      <RequiredItem identifier="paralyzant" amount="5" />
+      <RequiredItem identifier="proteinbar" />
+      <RequiredItem identifier="paralyzant" />
     </Fabricate>
     <Deconstruct time="100">
       <Item identifier="nanomechanicaltank" amount="2" />
@@ -412,9 +396,10 @@
       <RequiredSkill identifier="electrical" level="75" />
       <RequiredSkill identifier="mechanical" level="75" />
       <RequiredItem identifier="nanomechanicaltank" />
-      <RequiredItem identifier="plasmacutter" />
+      <RequiredItem identifier="proteinbar" />
       <RequiredItem identifier="dementonite" />
       <RequiredItem identifier="plastic" />
+      <RequiredItem identifier="plasmacutter" />
     </Fabricate>
     <Deconstruct time="100">
       <Item identifier="nanomechanicaltank" amount="2" />
@@ -496,9 +481,10 @@
       <RequiredSkill identifier="electrical" level="75" />
       <RequiredSkill identifier="mechanical" level="75" />
       <RequiredItem identifier="nanomechanicaltank" />
-      <RequiredItem identifier="weldingtool" />
+      <RequiredItem identifier="proteinbar" />
       <RequiredItem identifier="dementonite" />
       <RequiredItem identifier="plastic" />
+      <RequiredItem identifier="weldingtool" />
     </Fabricate>
     <Deconstruct time="100">
       <Item identifier="nanomechanicaltank" amount="2" />
@@ -630,9 +616,10 @@
       <RequiredSkill identifier="electrical" level="75" />
       <RequiredSkill identifier="mechanical" level="75" />
       <RequiredItem identifier="nanomechanicaltank" />
-      <RequiredItem identifier="fpgacircuit" amount="4" />
-      <RequiredItem identifier="fulgurium" amount="2" />
-      <RequiredItem identifier="titaniumaluminiumalloy" />
+      <RequiredItem identifier="fuelrod" />
+      <RequiredItem identifier="fpgacircuit" />
+      <RequiredItem identifier="proteinbar" />
+      <RequiredItem identifier="fulgurium" />
     </Fabricate>
     <Deconstruct time="100">
       <Item identifier="nanomechanicaltank" amount="2" />
@@ -664,9 +651,9 @@
       <RequiredSkill identifier="mechanical" level="100" />
       <RequiredItem identifier="nanomechanicaltank" amount="2" />
       <RequiredItem identifier="alienpowercell" />
-      <RequiredItem identifier="nucleargun" />
       <RequiredItem identifier="dementonite" amount="5" />
       <RequiredItem identifier="titaniumaluminiumalloy" amount="2" />
+      <RequiredItem identifier="nucleargun" />
     </Fabricate>
     <Deconstruct time="100">
       <Item identifier="nanomechanicaltank" amount="4" />
@@ -728,10 +715,10 @@
       <RequiredSkill identifier="electrical" level="75" />
       <RequiredSkill identifier="mechanical" level="75" />
       <RequiredItem identifier="nanomechanicaltank" amount="2" />
-      <RequiredItem identifier="ancientweapon" />
+      <RequiredItem identifier="alienpowercell" />
       <RequiredItem identifier="dementonite" amount="5" />
       <RequiredItem identifier="titaniumaluminiumalloy" amount="2" />
-      <RequiredItem identifier="fpgacircuit" amount="5" />
+      <RequiredItem identifier="ancientweapon" />
     </Fabricate>
     <Deconstruct time="100">
       <Item identifier="nanomechanicaltank" amount="4" />
@@ -780,7 +767,7 @@
       <Price storeidentifier="merchantmilitary" sold="false" />
       <Price storeidentifier="merchantmine" sold="false" />
       <Price storeidentifier="merchanthusk" minavailable="1" maxavailable="5">
-        <Reputation faction="huskcult" min="100" />
+        <Reputation faction="huskcult" min="90" />
       </Price>
     </Price>
     <Deconstruct time="50">
@@ -880,10 +867,10 @@
       <RequiredSkill identifier="electrical" level="75" />
       <RequiredSkill identifier="mechanical" level="75" />
       <RequiredItem identifier="nanomechanicaltank" amount="2" />
-      <RequiredItem identifier="fulguriumfuelrodvolatile" />
-      <RequiredItem identifier="fpgacircuit" amount="3" />
-      <RequiredItem identifier="titaniumaluminiumalloy" />
-      <RequiredItem identifier="plastic" />
+      <RequiredItem identifier="fuelrod" />
+      <RequiredItem identifier="fpgacircuit" />
+      <RequiredItem identifier="proteinbar" />
+      <RequiredItem identifier="handheldsonar" />
     </Fabricate>
     <Deconstruct time="100">
       <Item identifier="nanomechanicaltank" amount="4" />
