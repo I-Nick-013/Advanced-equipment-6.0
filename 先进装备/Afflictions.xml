@@ -2,7 +2,7 @@
 <Afflictions>
   <!--Affliction-->
   <Affliction name="" identifier="thepowerofnano" type="talentbuff" isbuff="true" hideiconafterdelay="true" limbspecific="false" maxstrength="100" treatmentthreshold="100" iconcolors="75,75,75;125,175,125;175,250,175">
-    <Effect minstrength="0" maxstrength="100" strengthchange="-10" resistancefor="damage,burn,bleeding,bloodloss,stun,radiationsickness,emp,pressure,gaze,hallucinating,hallucinatingshortduration,oxygenlow,alieninfection,paralysis,poison,debuff,psychosis,nausea,slow,spaceherpes,respawnpenalty,invertcontrols,infection,none" minresistance="0.5" maxresistance="0.5">
+    <Effect minstrength="0" maxstrength="100" strengthchange="-10" resistancefor="damage,burn,bleeding,bloodloss,stun,radiationsickness,emp,pressure,gaze,hallucinating,hallucinatingshortduration,oxygenlow,alieninfection,paralysis,poison,debuff,psychosis,nausea,slow,spaceherpes,respawnpenalty,invertcontrols,infection,none" minresistance="0.8" maxresistance="0.8">
       <StatusEffect target="Character" OxygenAvailable="10000" UseHullOxygen="true">
         <Affliction identifier="recoilstabilized" amount="1" />
         <ReduceAffliction identifier="damage" amount="10" />
@@ -66,7 +66,7 @@
   </Affliction>
   <!--Affliction-->
   <Affliction name="" identifier="Muscleenhancer" type="talentbuff" isbuff="true" hideiconafterdelay="true" limbspecific="false" maxstrength="100" treatmentthreshold="100" iconcolors="75,75,75;125,175,125;175,250,175">
-    <Effect minstrength="0" maxstrength="100" strengthchange="-50" resistancefor="damage,burn,bleeding,bloodloss,stun,emp,pressure,gaze,hallucinating,hallucinatingshortduration,oxygenlow,alieninfection,paralysis,poison,debuff,psychosis,nausea,slow,spaceherpes,respawnpenalty,invertcontrols,infection,none" minresistance="0.75" maxresistance="0.75">
+    <Effect minstrength="0" maxstrength="100" strengthchange="-50" resistancefor="damage,burn,bleeding,bloodloss,stun,emp,pressure,gaze,hallucinating,hallucinatingshortduration,oxygenlow,alieninfection,paralysis,poison,debuff,psychosis,nausea,slow,spaceherpes,respawnpenalty,invertcontrols,infection,none" minresistance="0.9" maxresistance="0.9">
       <StatusEffect target="Character">
         <Affliction identifier="recoilstabilized" amount="1" />
       </StatusEffect>
