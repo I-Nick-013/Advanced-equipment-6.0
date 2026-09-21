@@ -49,5 +49,6 @@
   <Afflictionname.undead>活死人</Afflictionname.undead>
   <Afflictiondescription.undead>你还不能死</Afflictiondescription.undead>
   <displayname.cultivation>[itemname] (培育)</displayname.cultivation>
+  <displayname.reset>[itemname] (初始化)</displayname.reset>
   <Visualaid>视觉辅助</Visualaid>
 </infotexts>

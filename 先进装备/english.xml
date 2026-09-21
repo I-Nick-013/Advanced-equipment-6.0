@@ -49,5 +49,6 @@
   <Afflictionname.undead>Living dead</Afflictionname.undead>
   <Afflictiondescription.undead>You can't die yet</Afflictiondescription.undead>
   <displayname.cultivation>[itemname] (Cultivation)</displayname.cultivation>
+  <displayname.reset>[itemname] (Initialize )</displayname.reset>
   <Visualaid>Visual aid</Visualaid>
 </infotexts>

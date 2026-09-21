@@ -270,6 +270,10 @@
       <RequiredItem identifier="proteinbar" />
       <RequiredItem identifier="headset" />
     </Fabricate>
+    <Fabricate suitablefabricators="fabricator" requiredtime="10" displayname="reset" requiresrecipe="false">
+      <RequiredSkill identifier="electrical" level="10" />
+      <RequiredItem identifier="WirelessHealingHeadset" />
+    </Fabricate>
     <Deconstruct time="100">
       <Item identifier="nanomechanicaltank" amount="2" />
       <Item identifier="scrap" amount="2" />
